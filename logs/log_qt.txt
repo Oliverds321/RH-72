@@ -1,0 +1,56 @@
+=== (A) ramp-derivative constants of rhoTwo vs the record's (A,B) = (36/e, 2e^8) ===
+    int_0^1 theta = 0.0070298584   (1/int = 142.25; B = 2e^8 = 5961.92 conservative by 20.96x... [B vs 1/int: ratio 41.91])
+    k=1: ||rho2^(k)||_1 =          1.0   bound B A^k k^2k =     7.896e+4   ratio    1.27e-5  OK 
+    k=2: ||rho2^(k)||_1 =        5.211   bound B A^k k^2k =     1.673e+7   ratio    3.11e-7  OK 
+    k=3: ||rho2^(k)||_1 =        44.14   bound B A^k k^2k =     1.01e+10   ratio    4.37e-9  OK 
+    k=4: ||rho2^(k)||_1 =        502.9   bound B A^k k^2k =    1.202e+13   ratio   4.18e-11  OK 
+    k=5: ||rho2^(k)||_1 =       8409.0   bound B A^k k^2k =    2.372e+16   ratio   3.54e-13  OK 
+    k=6: ||rho2^(k)||_1 =     2.273e+5   bound B A^k k^2k =    7.002e+19   ratio   3.25e-15  OK 
+    k=7: ||rho2^(k)||_1 =      1.04e+7   bound B A^k k^2k =    2.889e+23   ratio    3.6e-17  OK 
+    k=8: ||rho2^(k)||_1 =     6.879e+8   bound B A^k k^2k =    1.588e+27   ratio   4.33e-19  OK 
+=== (B) QT.a envelope on the real line: actual rhoTwo taper, L = 30, w = 2 ===
+    r        |phihat(r)|      envelope         log-slack (nats)
+       5         0.106255          92976.5      13.68  OK 
+      10       0.00577159          71344.7      16.33  OK 
+      20        4.5123e-5          49058.2      20.81  OK 
+      40       3.19993e-7          28886.1      25.23  OK 
+      80      4.47924e-10          13658.0      31.05  OK 
+     160      5.98941e-16          4735.26      43.51  OK 
+     320      2.17052e-19          1058.62      49.94  OK 
+=== (C) row-sum closed bound, c = 4/e ===
+    D=  10 L=  30 w=2: lhs =       11.087  rhs =       13.608  ratio 0.815  OK 
+    D=  50 L=  30 w=2: lhs =       1.8014  rhs =       2.6002  ratio 0.693  OK 
+    D= 100 L= 120 w=8: lhs =    0.0028579  rhs =    0.0039297  ratio 0.727  OK 
+=== (D) closing-condition ladder:  supplied vs needed exponent (nats) ===
+    supplied(2f) = (4/e)sqrt(c2 T/A);  needed(eta/L) = L/2 + logP + log(L/eta),
+    needed(Q^-2) = L/2 + 2logQ + logP;  single-factor supplies half.  eta = 0.01.
+    --- T = (logQ)^2.0,  D0 = T/log(calL), w = c2 log(calL) ---
+      logQ=     50 c2=   3: supplied=   35.0181 needed eta/L=   78.4952 Q^-2=   169.801   2f:eta- 2f:Q2- 1f:eta- 1f:Q2-
+      logQ=     50 c2=  45: supplied=   135.624 needed eta/L=   81.1781 Q^-2=   172.484   2f:eta+ 2f:Q2- 1f:eta- 1f:Q2-
+      logQ=     50 c2= 170: supplied=   263.606 needed eta/L=   82.5208 Q^-2=   173.827   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2-
+      logQ=  230.3 c2=   3: supplied=   161.293 needed eta/L=   193.646 Q^-2=   644.025   2f:eta- 2f:Q2- 1f:eta- 1f:Q2-
+      logQ=  230.3 c2=  45: supplied=   624.686 needed eta/L=   196.346 Q^-2=   646.725   2f:eta+ 2f:Q2- 1f:eta+ 1f:Q2-
+      logQ=  230.3 c2= 170: supplied=   1214.17 needed eta/L=   197.675 Q^-2=   648.054   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2-
+      logQ=   1000 c2=   3: supplied=   700.361 needed eta/L=   660.165 Q^-2=   2648.48   2f:eta+ 2f:Q2- 1f:eta- 1f:Q2-
+      logQ=   1000 c2=  45: supplied=   2712.49 needed eta/L=   662.871 Q^-2=   2651.18   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2-
+      logQ=   1000 c2= 170: supplied=   5272.13 needed eta/L=     664.2 Q^-2=   2652.51   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2-
+      logQ=  10000 c2=   3: supplied=   7003.61 needed eta/L=   6040.89 Q^-2=   26026.9   2f:eta+ 2f:Q2- 1f:eta- 1f:Q2-
+      logQ=  10000 c2=  45: supplied=   27124.9 needed eta/L=   6043.59 Q^-2=   26029.6   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2-
+      logQ=  10000 c2= 170: supplied=   52721.3 needed eta/L=   6044.92 Q^-2=   26030.9   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2+
+    --- T = (logQ)^2.2,  D0 = T/log(calL), w = c2 log(calL) ---
+      logQ=     50 c2=   3: supplied=   51.7832 needed eta/L=   79.2577 Q^-2=   170.564   2f:eta- 2f:Q2- 1f:eta- 1f:Q2-
+      logQ=     50 c2=  45: supplied=   200.556 needed eta/L=   81.9487 Q^-2=   173.255   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2-
+      logQ=     50 c2= 170: supplied=    389.81 needed eta/L=   83.2871 Q^-2=   174.593   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2+
+      logQ=  230.3 c2=   3: supplied=   277.872 needed eta/L=   194.729 Q^-2=   645.107   2f:eta+ 2f:Q2- 1f:eta- 1f:Q2-
+      logQ=  230.3 c2=  45: supplied=    1076.2 needed eta/L=   197.432 Q^-2=   647.811   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2-
+      logQ=  230.3 c2= 170: supplied=   2091.75 needed eta/L=   198.761 Q^-2=    649.14   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2+
+      logQ=   1000 c2=   3: supplied=    1397.4 needed eta/L=   661.545 Q^-2=   2649.86   2f:eta+ 2f:Q2- 1f:eta+ 1f:Q2-
+      logQ=   1000 c2=  45: supplied=   5412.12 needed eta/L=   664.252 Q^-2=   2652.56   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2+
+      logQ=   1000 c2= 170: supplied=   10519.3 needed eta/L=   665.581 Q^-2=   2653.89   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2+
+      logQ=  10000 c2=   3: supplied=   17592.3 needed eta/L=   6042.73 Q^-2=   26028.7   2f:eta+ 2f:Q2- 1f:eta+ 1f:Q2-
+      logQ=  10000 c2=  45: supplied=   68134.6 needed eta/L=   6045.44 Q^-2=   26031.4   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2+
+      logQ=  10000 c2= 170: supplied=  132430.0 needed eta/L=   6046.77 Q^-2=   26032.8   2f:eta+ 2f:Q2+ 1f:eta+ 1f:Q2+
+=== (E) F2 pair repair: direct-sum toy, 60 blocks of dim 8 ===
+    true |loss| = 3.626
+    pair-lemma guaranteed loss  = 1103.613   (holds: True)
+    scalar-B guaranteed loss    = 8865.497   (inflation vs pair: 8.0x; grows like sqrt(#blocks) in the dominant term)

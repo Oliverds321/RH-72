@@ -1,0 +1,8 @@
+=== (1) the 0.3693 trap: in-zone 2|a|, out-zone 2C (C = 2pi^4/27, the dyadic constant of Corollary 3) ===
+  best support b = 0.54 (lam = 1.08);  P = 2 - B:
+    n=800: P = 0.369141
+    n=1600: P = 0.369256
+    n=3200: P = 0.369198
+  Richardson: P = 0.369178   (quoted trap value 0.3693; review value 0.369289)
+  min v/max v at n=3200: +7.53e-02  (v >= 0 non-binding check)
+=== (2) the q/phi(q) weight, declined in §6 ===

@@ -1,0 +1,47 @@
+=== gates ===
+=== MANDATORY GATES ===
+  analytic MT              P = 0.672500703679412   (target 0.672500703679412, d=-3.3e-16)
+  Nystrom C=1,lam=1 Rich.  P = 0.672500725    (vs analytic MT, d=2.1e-08)
+  flat-v C=1,lam=1         B = 1.333333325032   (target 4/3, d=-8.3e-09)
+  free boundary C=pi^4/18  P = 0.7212835668  lam*=1.2507321515  (target 0.7212835668, d=4.1e-12)
+  free boundary C=2pi^4/27 P = 0.7099167448  lam*=1.1931581210  (target 0.7099167448, d=-4.4e-11)
+  |v(b*)| residual at C=pi^4/18: 5.6e-17
+
+=== Table 2 at ramp 6w/L  (r2 = 6w/L, THE PRINTED TABLE) (design (3.5,3), curvature, minor rows in) ===
+        Q       LL    lam*   delta     zone     ramp   buffer     ends     minor     TOTAL |    P_eff       w*
+     1e25     69.9  1.0246  0.3267   0.2514   0.1201   0.1202  0.00123   0.02519    0.5181 |  +0.2032     1.43
+    1e100    247.5  1.1534  0.1317   0.0784   0.0210   0.0075  0.00004   0.00274    0.1097 |  +0.6116     1.00
+    1e300    711.8  1.2082  0.0564   0.0305   0.0070   0.0010  0.00000   0.00059    0.0391 |  +0.6822     1.00
+   1e1000   2327.8  1.2350  0.0207   0.0107   0.0021   0.0001  0.00000   0.00013    0.0131 |  +0.7082     1.00
+  1e10000  23059.2  1.2486  0.0027   0.0014   0.0002   0.0000  0.00000   0.00001    0.0016 |  +0.7197     1.00
+   non-vacuous    from 1e20
+   P_eff>0.5      from 1e51
+   P_eff>record   from 1e236
+   P_eff>2/3      from 1e209
+
+=== Table 2 at ramp 4w/L  (the sharper reading) (design (3.5,3), curvature, minor rows in) ===
+        Q       LL    lam*   delta     zone     ramp   buffer     ends     minor     TOTAL |    P_eff       w*
+     1e25     69.9  1.0246  0.3267   0.2514   0.0980   0.0982  0.00123   0.02519    0.4740 |  +0.2473     1.75
+    1e100    247.5  1.1534  0.1317   0.0784   0.0140   0.0075  0.00004   0.00274    0.1027 |  +0.6186     1.00
+    1e300    711.8  1.2082  0.0564   0.0305   0.0047   0.0010  0.00000   0.00059    0.0368 |  +0.6845     1.00
+   1e1000   2327.8  1.2350  0.0207   0.0107   0.0014   0.0001  0.00000   0.00013    0.0124 |  +0.7089     1.00
+  1e10000  23059.2  1.2486  0.0027   0.0014   0.0001   0.0000  0.00000   0.00001    0.0015 |  +0.7197     1.00
+   non-vacuous    from 1e18
+   P_eff>0.5      from 1e48
+   P_eff>record   from 1e220
+   P_eff>2/3      from 1e195
+
+=== the gap, quantified (for §10.4's follow-on sentence) ===
+   1e25     6w/L +0.2032   4w/L +0.2473   gain +0.0441
+   1e100    6w/L +0.6116   4w/L +0.6186   gain +0.0070
+   1e300    6w/L +0.6822   4w/L +0.6845   gain +0.0023
+   1e1000   6w/L +0.7082   4w/L +0.7089   gain +0.0007
+   non-vacuous  6w/L 1e20    4w/L 1e18     (1.40 orders)
+   >0.5         6w/L 1e51    4w/L 1e48     (2.91 orders)
+   >record      6w/L 1e236   4w/L 1e220    (15.53 orders)
+
+=== w* and the rate constant at the design of record ===
+   w* at 1e100, (3.5,3), 6w/L objective : 1.00   (D0 = 2.325e+05, wD0/LL^2 = 3.80)
+   [historical: w* at r=3, 4w/L objective: 2.84 — the region the old '~2.3' was quoted from]
+   rate const total*LL/logLL at logQ=2.3e6, ramp 4w/L : 3.450  [s(r+K) = 3.297]
+   rate const total*LL/logLL at logQ=2.3e6, ramp 6w/L : 3.560  [s(r+K) = 3.297]

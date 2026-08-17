@@ -1,0 +1,6 @@
+=== (1) LGrowth bound ||L(s,chi)|| <= q|s|/Re s  (tree: LGrowth.lean:210) ===
+    worst ratio over q in {5,7,11}, 2 chars each, 5 s-values: 0.0913  (OK)
+=== (2) A0 on the real zero dataset (60 primitive chars, moduli 5..19) ===
+    max N_chi(t,t+1]/log(q(|t|+3)) = 0.384  at (q,j,t,count) = (13, 10, np.float64(11.0), 2)
+    => measured A0 on the dataset = 0.38; the classical statement carries an
+       absolute A0 (Landau-type); [diagnostic only]

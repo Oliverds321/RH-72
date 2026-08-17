@@ -1,0 +1,11 @@
+(1) Parseval identity  Mform = INT g |F|^2  (no 2pi):
+    trial 0: LHS=1.509409360709e+02  RHS=1.509409360709e+02  rel=3.77e-15
+    trial 1: LHS=8.135043410452e+01  RHS=8.135043410452e+01  rel=1.89e-14
+    trial 2: LHS=8.291712869312e+01  RHS=8.291712869312e+01  rel=2.21e-14
+(2) min g on grid = 9.881e-134  (>= 0 required)
+(3) coefficient display (a_n(u), D_T weights): max rel err = 6.14e-06
+    and Parseval on P_chi: LHS=1.0445941614e+00  RHS=1.0445941614e+00  rel=4.29e-14
+(4) INT g |D_T(s - log n)|^2 ds  vs  2*pi*T*g(log n)  [deviation = the D_T-smearing
+    term of Q7.iii, relative O((1+|g'/g|)/T); must shrink ~1/T]:
+    n=2: rel dev at T=6/24/96 = 1.043e-01 / 2.607e-02 / 6.518e-03   (ratios 4.0x, 4.0x per 4x in T)
+    n=7: rel dev at T=6/24/96 = 9.105e-01 / 2.276e-01 / 5.691e-02   (ratios 4.0x, 4.0x per 4x in T)

@@ -1,0 +1,15 @@
+=== (1) calibration gates (rule 14) ===
+    flat-v gate: B = 1.333000  (target 4/3 = 1.333333)
+    MT gate (lam = 1): P = 0.6725012  (target 0.6725007)
+    C = pi^4/18 at b* : P = 0.7212636  (target 0.7212836)
+    dyadic gate       : P = 0.7098441  (target 0.7099167)
+=== (2) ramp study at C = pi^4/18, b = b* ===
+    unramped P (n=4001) = 0.7212635;  min v*/max v* = -8.12e-05 (v >= 0 VIOLATED)
+    edge fit v(t) ~ 5.433*(b-|t|) + 1.01e-05  (linear vanish)
+    rho        P(rho)        DeltaP        DeltaP/rho^2
+     0.02   0.7212599   +3.611e-06    +0.0090
+     0.04   0.7212337   +2.984e-05    +0.0186
+     0.08   0.7210114   +2.522e-04    +0.0394
+     0.16   0.7190524   +2.211e-03    +0.0864
+    measured scaling exponent of DeltaP in rho: 3.09  (2 = second order, the
+    free-boundary prediction; 1 would be the budgeted first-order O(w/L))

@@ -1,0 +1,26 @@
+=== (A) shipped design (D0 = T/logLL, w = 169 logLL, T = LL^2) — R4 F1/F2 reproduction ===
+  Q=1e100: 8w<=L?  NO  L1..L5 = 0.019/0.035/12.367/1.095/0.0915  total = 13.608  P_eff = -12.887
+  Q=1e1000: 8w<=L?  NO  L1..L5 = 0.003/0.005/1.808/0.774/0.0134  total = 2.604  P_eff = -1.882
+  Q=1e10000: 8w<=L? yes  L1..L5 = 0.000/0.001/0.236/0.597/0.0017  total = 0.836  P_eff = -0.114
+  (R4 quotes: at 1e100 ramp 12.97, buffer 1.095, total 14.22, P_eff -13.51; wrange NO)
+=== (B) rebalanced concrete design: T = (logQ)^(3+eps), D0 = LL^2 logLL, w = 3 logLL ===
+  --- eps = 0.0 ---
+    Q=1e    25: adm N closes y  L1..L5 = 0.0771/0.0945/0.5959/0.6110/0.00600  total = 1.3845  P_eff = -0.6632
+    Q=1e   100: adm y closes y  L1..L5 = 0.0300/0.0342/0.2156/0.1619/0.00044  total = 0.4421  P_eff = +0.2792
+    Q=1e   300: adm y closes y  L1..L5 = 0.0127/0.0141/0.0888/0.0600/0.00006  total = 0.1757  P_eff = +0.5456
+    Q=1e  1000: adm y closes y  L1..L5 = 0.0047/0.0051/0.0320/0.0206/0.00001  total = 0.0623  P_eff = +0.6590
+    Q=1e 10000: adm y closes y  L1..L5 = 0.0006/0.0007/0.0042/0.0026/0.00000  total = 0.0081  P_eff = +0.7132
+  --- eps = 0.5 ---
+    Q=1e    25: adm N closes y  L1..L5 = 0.0896/0.0924/0.5826/0.0860/0.00082  total = 0.8514  P_eff = -0.1301
+    Q=1e   100: adm y closes y  L1..L5 = 0.0353/0.0339/0.2137/0.0109/0.00003  total = 0.2938  P_eff = +0.4275
+    Q=1e   300: adm y closes y  L1..L5 = 0.0150/0.0140/0.0885/0.0023/0.00000  total = 0.1198  P_eff = +0.6014
+    Q=1e  1000: adm y closes y  L1..L5 = 0.0055/0.0051/0.0320/0.0004/0.00000  total = 0.0430  P_eff = +0.6783
+    Q=1e 10000: adm y closes y  L1..L5 = 0.0007/0.0007/0.0042/0.0000/0.00000  total = 0.0056  P_eff = +0.7157
+  rate check at eps=0: total*LL/log(LL) across Q (should stabilise = O(loglogQ/logQ) class):
+    19.68 / 18.69 / 18.57 / 18.57
+=== (C) best-achievable P_eff over (w, D0, eps) — R4 reproduction ===
+    Q=1e100: best P_eff = +0.6433
+    Q=1e1000: best P_eff = +0.7100
+    Q=1e1064: best P_eff = +0.7106
+  (R4 quotes: ~0.62 best at 1e100 [dyadic P; ours is q<=Q so slightly higher is fine];
+   0.698 reachable near 1e1064)

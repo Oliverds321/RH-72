@@ -1,0 +1,22 @@
+family: 60 primitive characters, moduli [5, 7, 11, 13, 17, 19]  (expect 60)
+=== (1) digamma envelope |Re psi(1/4 + k/2 + i t/2)| <= log(2+|t|/2) + 4.3 ===
+    worst ratio over both parities, tau in [0, 5000]: 0.8467  (OK)
+=== (2) B_fam bound pointwise ===
+    tau      sum nu^2      bound        ratio
+        0.0        8.624      998.542   0.0086  OK
+       10.0       44.946     1052.538   0.0427  OK
+       15.0       53.532     1067.147   0.0502  OK
+       20.0       55.996     1078.705   0.0519  OK
+       40.0       59.672     1110.241   0.0537  OK
+      100.0       81.477     1158.830   0.0703  OK
+     1000.0      119.931     1308.459   0.0917  OK
+=== (3) LS at fixed tau, tau-twisted coefficients ===
+    tau=    0.0:  family sum =    162.509   budget (X+Q^2-1)||a||^2 =   4298.876   ratio 0.0378  OK
+    tau=   12.5:  family sum =    499.859   budget (X+Q^2-1)||a||^2 =   4298.876   ratio 0.1163  OK
+    tau=  333.0:  family sum =    511.472   budget (X+Q^2-1)||a||^2 =   4298.876   ratio 0.1190  OK
+=== (4) far-field shape: B_fam(tau) / [ c Q LL (1 + log+(|tau|/4T)) ] ===
+    tau=     15.0:  B_fam =     7.317   Q*LL*(1+log+) =    64.774   ratio 0.1130
+    tau=     40.0:  B_fam =     7.725   Q*LL*(1+log+) =    64.774   ratio 0.1193
+    tau=    200.0:  B_fam =     9.082   Q*LL*(1+log+) =   169.023   ratio 0.0537
+    tau=   2000.0:  B_fam =    10.487   Q*LL*(1+log+) =   318.170   ratio 0.0330
+    tau=  20000.0:  B_fam =    14.261   Q*LL*(1+log+) =   467.318   ratio 0.0305

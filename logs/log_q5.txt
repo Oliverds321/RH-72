@@ -1,0 +1,27 @@
+builder anchor: sum phi*(q), q<=60 = 662  vs (18/pi^4) 60^2 = 665.2
+=== (1) exact aggregated identity + (2) crude bound, Q = 60 ===
+    (n,m)=( 2, 3): S =   -12.000  exact-formula =   -12  crude Q*tau =   60  OK
+    (n,m)=( 2, 7): S =   -16.000  exact-formula =   -16  crude Q*tau =  120  OK
+    (n,m)=( 3,13): S =   -21.000  exact-formula =   -21  crude Q*tau =  240  OK
+    (n,m)=( 5,29): S =   -27.000  exact-formula =   -27  crude Q*tau =  480  OK
+    (n,m)=(11,13): S =    -7.000  exact-formula =    -7  crude Q*tau =  120  OK
+    (n,m)=( 7,37): S =   -27.000  exact-formula =   -27  crude Q*tau =  480  OK
+    (n,m)=( 4, 9): S =   -20.000  exact-formula =   -20  crude Q*tau =  120  OK
+    (n,m)=(25,27): S =   -11.000  exact-formula =   -11  crude Q*tau =  120  OK
+    (n,m)=( 2,32): S =   -29.000  exact-formula =   -29  crude Q*tau =  480  OK
+    identity + bound: ALL OK
+=== (3) zone sum S(Y) growth ===
+    Y        S(Y)       S/Y      S/(Y logY)   S/(Y logY^2)   local exponent j
+      250     5838.1    23.352     4.2294      0.76599
+      500    15035.3    30.071     4.8387      0.77860         2.14
+     1000    35891.4    35.891     5.1958      0.75217         1.67
+     2000    84052.5    42.026     5.5291      0.72743         1.65
+     4000   192328.0    48.082     5.7972      0.69896         1.54
+=== (4) delta'-calibration: relative = exp(-K loglogQ) * L^(j-2), proved j = 3 ===
+    logQ     K=1        K=1.5      K=2
+       50.0      1.000      0.141     0.0200
+      230.3      1.000      0.066     0.0043
+     1000.0      1.000      0.032     0.0010
+    10000.0      1.000      0.010     0.0001
+    (K=1: Theta(1), does NOT vanish; K=1.5 slow; K=2: -> 0 like 1/logQ.  At the
+     measured j from (3) the margins improve; the LEMMA adopts K = 2 as proved-safe.)
