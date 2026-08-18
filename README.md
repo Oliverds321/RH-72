@@ -110,4 +110,4 @@ the author.
 
 ---
 
-*License: Apache-2.0. Cite via `CITATION.cff`. The paper: [`paper/`](paper/).*
+*License: Apache-2.0. Cite via `CITATION.cff`. The paper: [`paper/paper.pdf`](paper/paper.pdf) (source: [`paper.tex`](paper/paper.tex), [`paper.md`](paper/paper.md)).*

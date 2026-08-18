@@ -253,9 +253,9 @@ derivation and optimisation of the construction of §§4–12, the numerical wor
 and the ancillary scripts, and the drafting of the exposition are all substantially
 AI-generated, and this is disclosed in accordance with arXiv's policy on generative AI
 language tools. No AI system is listed as an author. Verification of the mathematical
-content has been by process rather than by the author's own line-by-line reading: eight
-rounds of independent adversarial review (themselves AI-conducted, on blinded bundles,
-including one fully independent session with no project history), numerical calibration
+content has been by process rather than by the author's own line-by-line reading:
+repeated rounds of independent adversarial review (AI-conducted, on blinded bundles,
+including fully independent sessions with no project history), numerical calibration
 gates that reproduce two published third-party constants (§11), reproducible ancillary
 scripts for every quoted figure, and the planned Lean formalization of §13, which is the
 intended final arbiter. The named author takes full responsibility for the entire contents
@@ -282,7 +282,7 @@ g = φ²⋆φ² ≥ 0; **(H4)** the Gevrey-2 profile ϱ₂ with derivative const
 majorants (the cap-free L-intrinsic forms) with their explicit constants; **(H6)** the
 q-uniform local count N_χ(t, t+1] ≤ A₀·log(q(|t|+3)) with absolute A₀. The λ ≤ 1 audit:
 [R]'s T-aspect development frequently assumes λ ≤ 1 (equivalently X ≤ T, which fails here at
-EVERY λ since X = (QT/2π)^λ ≫ T); the audit of §9 (file-level record in the companion working notes) shows that no PROOF among H1–H6's consumes it — H1 is bandwidth-free
+EVERY λ since X = (QT/2π)^λ ≫ T); the audit of §9 (file-level record in the companion working notes) shows that none of H1–H6's proofs consumes it — H1 is bandwidth-free
 by its signature, H3–H6 are cap-free by construction, and the cap-gated material ([R]'s
 prime side, ends instantiation, payoff algebra, calE analytics) is replaced, not imported —
 with one Lean-structural caveat stated in §9: [R]'s Params.Valid bundles λ ≤ 1 (and w ≥ 1),
@@ -303,7 +303,8 @@ grep).
 Primitive χ mod q, q ≤ Q; κ = κ(χ) ∈ {0, 1} the parity. ℒ := log(QT/2π); bandwidth
 parameter λ ∈ (0, 2); L := λℒ; X := e^L = (QT/2π)^λ. Window I := [T, 2T], T = (log Q)^{3+ε}.
 Grid τ_k := T + kh, h := 2π/L, d := ⌊LT/2π⌋ (≍ ℒ^{1+r+ε} — ℒ^{4.5} at the design of
-record: polylog). paperFT h_f(z) :=
+record: polylog). paperFT (the Fourier normalisation of [R], carried unchanged):
+h_f(z) :=
 ∫ f(u)e^{izu}du. Taper: the Gevrey-2 profile ϱ₂ of [R] (their P1–P4: normalized primitive of
 e^{−1/x}e^{−1/(1−x)}, derivative constants (A, B) = (36/e, 2e⁸)), φ(u) := ϱ₂((L/2 − |u|)/w),
 ramp width w and buffer D₀ — the values w = 3 log ℒ, D₀ = ℒ² log ℒ displayed in §7 are ONE
@@ -585,7 +586,7 @@ Lean-level instantiation is deferred to the formalization.
 RvM-χ with absolute constant; the local count N_χ(t, t+1] ≤ A₀·log(q(|t|+3)) with ABSOLUTE
 A₀. Every analytic constant in the chain is already explicit-and-linear in q in [R]'s own
 development (‖L(s,χ)‖ ≤ q‖s‖/Re s; ‖L(w,χ)‖ ≤ 8q(|w.im|+3)); the uniformity is re-packaging,
-not new analysis. The buffer count NII_χ ≤ 3A₀D₀·log-scale gives the L₄ budget row.
+not new analysis. The buffer count N_{II,χ} ≤ 3A₀D₀·log-scale gives the L₄ budget row.
 **The λ ≤ 1 / X ≤ T audit (full file-level table in the companion working notes):** [R]'s Params.Valid bundles lam_le_one, so the reuse obligation is
 the ParamsQ weakening (budgeted in the formalization plan), and Tail/ is NOT "reused verbatim"
 (theta0_le hard-codes D₀² = T) — both corrected from QR.4's first version; the moment core,
@@ -626,7 +627,7 @@ slowly decreasing for r > 3 — CLAMPED at the regime floor w ≥ 1 carried by t
 lemmas ([R]'s Params.Valid field one_le_w; side conditions in the companion working notes), which binds at
 the design of record from Q ≈ 10⁵⁰; so the design sets w = max(1, w*) (= 1 at Q = 10¹⁰⁰;
 the previously quoted ≈ 2.3 was the r = 3 optimum under the retired 4w/L objective, and is
-withdrawn), D₀ balanced accordingly, every side condition satisfied ([eq:wrange], the QT.a
+withdrawn), D₀ balanced accordingly, every side condition satisfied (the admissibility condition 8w ≤ L, the QT.a
 optimisation, wD₀ ≫ e²A), and ramp + buffer = O(1/ℒ) — the clamp contributes 6/(λℒ), the
 same order with constant 6/λ*. One accounting question is stated openly for review: [R]'s
 aggregate calE carries a trace-side w/L, which is NOT a separate charge in our accounting —

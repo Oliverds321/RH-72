@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use or discuss this work, please cite it as below."
-title: "Simple zeros on the critical line for the primitive Dirichlet family: an unconditional 72.128% on family average"
+title: "Simple zeros on the critical line for the primitive Dirichlet family: 72.128% of the Generalized Riemann Hypothesis, on average, unconditionally"
 authors:
   - family-names: "D'Souza"
     given-names: "Oliver"
 date-released: "2026-08-18"
-version: "0.6"
+version: "0.8"
 url: "https://github.com/Oliverds321/RH-72"
 notes: "Substantially AI-generated (Claude, Anthropic) under the author's direction; see PROVENANCE.md and the paper's Section 1.6 disclosure. Builds on the preprint [R] and its Lean artifact github.com/anthropics/zeta-23-lean."
