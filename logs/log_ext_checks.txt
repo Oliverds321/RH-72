@@ -1,0 +1,10 @@
+=== B1.1: v>=0 ladder (C=pi^4/18, b*=0.6253660758, unconstrained solve) ===
+  n=  500  min v/max v = +5.349e-03
+  n= 1000  min v/max v = +3.278e-03  ratio vs prev: +0.613
+  n= 2000  min v/max v = +2.240e-03  ratio vs prev: +0.684
+  n= 4000  min v/max v = +1.080e-03  ratio vs prev: +0.482
+  n= 8000  min v/max v = +4.992e-04  ratio vs prev: +0.462
+=== B1.5: closing-margin sensitivity (design (3.5,3), 6w/L) ===
+  margin >= 0 (printed table)  1e25: +0.2032   1e100: +0.6116   1e300: +0.6822
+  margin >= 1 nat              1e25: +0.2002   1e100: +0.6115   1e300: +0.6822
+  margin >= 0.1*L              1e25: +0.1818   1e100: +0.6092   1e300: +0.6818

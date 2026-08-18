@@ -3,13 +3,14 @@
 > The **Generalized Riemann Hypothesis** predicts that every zero of every Dirichlet
 > L-function lies on the critical line. This work proves — unconditionally, with no
 > hypothesis — that at least **72.128%** of them do, and are simple besides, averaged over
-> *every* primitive character of *every* modulus q ≤ Q. That is the largest fraction of
-> GRH ever established for this family, by 8 to 15 points over the standing records.
+> *every* primitive character of *every* modulus q ≤ Q. That is the largest family-average
+> proportion ever proven for any Dirichlet family — 8 to 15 points above the standing
+> records on the comparable families.
 >
-> Derived by an AI system and put through repeated adversarial review before you ever saw
-> it. **This repository is the verification core:
-> the paper, and every script, log, and dataset behind every number in it — enough to check
-> the result top to bottom.**
+> **This repository is the complete verification package: the paper, and every script,
+> log, and dataset behind every number in it — enough to check the result top to bottom.**
+> The work is substantially AI-generated; authorship and disclosure are stated plainly
+> below.
 
 *(To be precise about what is and is not claimed: this does **not** prove the Riemann
 Hypothesis or GRH, and it makes no claim about any individual L-function — a zero-density
@@ -32,7 +33,7 @@ of the zeros are simple and lie on the critical line.
 |---|---|---|---|
 | Theorem 1 | all primitive, q ≤ Q, equal weight | **0.72128** | — (no prior result for this family) |
 | Corollary 2 | dyadic conductor q ∈ (Q/2, Q] | **0.70992** | 0.56 — Conrey–Iwaniec–Soundararajan (2013), at r ≥ 6, up to window shape and weight |
-| Corollary 3 | even primitive, dyadic | **0.69194** | 0.6044 — Sono (2021) |
+| Corollary 3 | even primitive, dyadic | **0.69194** | 0.6044 — Sono (2021; J. Number Theory 2025) |
 | Corollary 3′ | **odd** primitive, dyadic | **0.69194** | — (no prior result at all) |
 
 For calibration: the strongest *published* per-character unconditional proportion is Wu's
@@ -41,6 +42,11 @@ this work builds on. The engine is a one-sided use of the classical multiplicati
 sieve — which is lossless precisely when the family is larger than the polynomial — in
 place of the GRH pair-correlation asymptotic, with a C-penalised variational problem
 converting the sieve constant into a proportion.
+
+Finite-Q honesty, up front: on the construction's own model the theorem is non-vacuous
+from Q ≈ 10²⁰, exceeds 1/2 from Q ≈ 10⁵¹, and exceeds the per-character record only from
+Q ≈ 10²³⁶ (paper §10.4, computed by a shipped script). Asymptotic statements are the norm
+in this line; this work computes the thresholds most papers do not.
 
 ## The foundation
 
@@ -73,21 +79,20 @@ shipped beside it; the 5,230-zero dataset used by the diagnostic anchors is in
 
 **Author: Oliver D'Souza.** The mathematics, numerics, and exposition were produced
 substantially by Claude (Anthropic) under the author's direction; verification was by
-process — the adversarial review record above, the calibration gates, and the Lean track —
-rather than by the author's own line-by-line reading, and the paper's disclosure statement
-(§1.6) says exactly that in arXiv's own vocabulary. No AI system is listed as an author.
-The foundation [R] is itself an AI-generated work. This repository exists so that nobody
-has to take anyone's word — human or machine — for any of it.
+process — the adversarial review record (below), the calibration gates, and the Lean
+track — rather than by the author's own line-by-line reading, and the paper's disclosure
+statement (§1.6) says exactly that in arXiv's own vocabulary. No AI system is listed as an
+author. The foundation [R] is itself an AI-generated work.
 
 ## Verification
 
-The work was checked through multiple rounds of independent, adversarial AI review —
-including sessions given no project history at all — with every review and point-by-point
-response preserved in a companion archive available to reviewers and collaborators. The
-construction has survived every round; the headline constants have been reproduced by
-seven independent implementations; and the variational layer reproduces two third-party
+The work went through multiple rounds of adversarial AI review before release, with every
+review and point-by-point response preserved in a companion archive; the process caught
+real errors, all fixed and documented. The variational layer reproduces two third-party
 *published* constants — Montgomery–Taylor's 0.672500703679 and Sono's 0.93228262 — as
-mandatory calibration gates that every shipped solver must pass.
+calibration gates. To be plain about what that is and is not: AI review is evidence about
+internal consistency, citation accuracy and local error; it is not a substitute for expert
+human review.
 
 ## Roadmap
 
@@ -100,8 +105,8 @@ mandatory calibration gates that every shipped solver must pass.
 
 ## Reviews welcome
 
-Reviews, comments, error reports, and collaboration are all welcome — via issues here or
-by contact with the author.
+Reviews and corrections are welcome and appreciated — via issues here or by contact with
+the author.
 
 ---
 

@@ -13,7 +13,12 @@ output in `logs/`. Requirements: Python 3.10+, `numpy scipy mpmath`.
 | `qg_check.py` | a deliberately coarse independent grid anchor (4–5 digits; its printed v ≥ 0 flag is a discretisation artifact, absent in the fine solves — see paper §1.6) | `log_qg.txt` |
 
 Three calibration gates must pass in any reimplementation: the Montgomery–Taylor value
-0.672500703679412 (closed form), the flat-profile value 4/3, and Sono's 0.93228262.
+0.672500703679412 (closed form), the flat-profile value 4/3, and Sono's 0.93228262. (The
+gates are special cases — fixed kernel or a C-limit — so they certify the solver against
+outside ground truth; the finite-C free-boundary regime of the headline is checked by the
+closed-form/Nyström twelve-digit agreement and the KKT complementarity in payoff_hp2.py.)
+
+| `ext_checks.py` | two robustness checks from external review: the v ≥ 0 positivity ladder (min v positive at every resolution, decaying like the grid spacing) and the closing-margin sensitivity (a forced 1-nat margin moves the finite-Q table by ≤ 0.003) | `log_ext_checks.txt` |
 
 ## 2. The finite-Q table (paper §10.4, Table 2)
 

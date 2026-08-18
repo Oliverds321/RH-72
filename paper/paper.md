@@ -1,6 +1,6 @@
 # Simple zeros on the critical line for the primitive Dirichlet family: 72.128% of the Generalized Riemann Hypothesis, on average, unconditionally
 
-**Preprint — 2026-08-17 (v0.7).**
+**Preprint — 2026-08-18 (v0.8).**
 
 **Author: Oliver D'Souza.**
 
@@ -123,7 +123,8 @@ different class on both grounds; the harmonic 1/φ(q) weight is NOT a class sepa
 
 Per character, the strongest PUBLISHED unconditional proportion of simple-and-on-line zeros
 of Dirichlet L-functions is Wu's **0.4074** [Wu19] (with 0.4172 on the line), for every
-primitive χ mod q with log q = o(log T); for ζ alone the corresponding constants are
+primitive χ mod q with log q = o(log T); for the family of all primitive characters of a
+single FIXED modulus, Dickinson [Di24] gives 38.2% on the line, at T ≫ q^ε; for ζ alone the corresponding constants are
 Pratt–Robles–Zaharescu–Zeindler's 0.407511 and 0.417293 [PRZZ] — the latter is the "more
 than five-twelfths" quoted as 41.7% in the recent expository literature [GS26]. Higher
 still, but not published: the preprint [R], dated 11 August 2026 and revised in place
@@ -163,21 +164,21 @@ family's constant; §12.2–12.3.) On the procedural point: dependence on unrefe
 not unusual in this literature — the asymptotic large sieve [CIS1] is listed by its first
 author among unpublished papers and has remained so since 2011, and [CIS2], [CLLR], [So16]
 (via [CLLR]), [CL] and [Wu16] all rest on it, [Wu16] citing it by its arXiv number as
-unpublished; [So21], the current record for the even primitive family, has itself been an
-arXiv-only preprint for five years, and takes its mean-value input not from [CIS1] but from
-the published [CIS3]. §2.1 isolates every statement this paper imports from [R], so the
-dependency is checkable.
+unpublished. §2.1 isolates every statement this paper imports from [R], so the dependency
+is checkable.
 
 ### 1.3 The idea, and the one-sided large sieve
 
 The certificate of [R] consumes, for each χ, a second moment of a zero-counting linear form
 — a family pair-correlation-type quantity — **with a single sign: an upper bound suffices.**
 Under GRH the relevant object F(α) is known asymptotically for the Dirichlet family: F(α) =
-min(|α|, 1) on |α| < 2 (Özlük [Öz]; Chandee–Lee–Liu–Radziwiłł [CLLR], whose Corollary 3 is
-the sharpest such statement; our Corollary 2 produces a one-sided unconditional counterpart
-of its CONTENT for the dyadic family, where the normalisation matches exactly — for the
-q ≤ Q family of Theorem 1 the consumed object is the large-sieve majorant of §12.1, not
-[CLLR]'s F_Φ).
+min(|α|, 1) on |α| < 2 — for the PRIMITIVE family this is Chandee–Lee–Liu–Radziwiłł
+[CLLR, Thm 2] (their Corollary 3 is the character-sum consequence); the antecedent, over
+ALL characters rather than the primitive ones, is Özlük [Öz] — the primitivity is exactly
+the defect [CLLR] name and fix. Our Corollary 2 produces a one-sided unconditional
+counterpart of that statement's CONTENT for the dyadic family, where the normalisation
+matches exactly — for the q ≤ Q family of Theorem 1 the consumed object is the large-sieve
+majorant of §12.1, not [CLLR]'s F_Φ.
 Unconditionally, in the t-aspect, the trivial bound loses a factor log T ([BGST, Thm 1] —
 the unconditional t-aspect Montgomery theorem — and [Go], survey).
 The observation this paper runs on — we are not aware of it being recorded, and we state it
@@ -193,6 +194,13 @@ constant factor" of [CIS1] — paid on the off-diagonal range 1 < |α| ≤ λ wh
 would be F = 1. The certificate turns that overshoot into a proportion via a C-penalised
 variational problem (§10) whose value exceeds the record's constant for every finite C.
 
+**Remark (the size of the margin).** Corollary 2 exceeds [CIS2] by fifteen points using a
+sieve inequality available since 1974, and the margin is large for this literature. The
+structural explanation is short: the certificate the sieve plugs into is days old, so the
+combination could not have been tried before. We do not ask the reader to weigh
+explanations — a result of this profile can be wrong at any margin, and the repository is
+built so that checking, not argument, settles it.
+
 ### 1.4 Why q ≤ Q, against the field's convention
 
 Every family result in this literature normalises q ≍ Q (we verified fifteen papers without
@@ -202,7 +210,10 @@ states the convention verbatim: "the conductor q is restricted by a smooth funct
 compact support in ℝ₊, so q ≍ Q" — [CIS2] and [Wu16] inherit Ψ from it). The convention is
 inherited from machinery: the asymptotic large sieve
 [CIS1] — the engine under all the asymptotic results — is stated for q ≍ Q. **This paper
-does not use the asymptotic large sieve.** The classical sieve's native and sharp range is
+does not use the asymptotic large sieve.** (The polylog-T window, by contrast, is NOT part
+of the novelty claim: [So21] already operates from the weaker floor (log Q)², below our
+(log Q)^{3+ε}. What no prior result covers is the FAMILY — every primitive character of
+every modulus q ≤ Q, at equal weight.) The classical sieve's native and sharp range is
 exactly q ≤ Q; restricting to the dyadic family costs (the budget N + Q² − 1 is charged
 against the largest modulus while the dyadic family supplies only 3/4 of the characters),
 which is precisely why C_dyad = 2π⁴/27 > π⁴/18. Our family choice is a design argument, not
@@ -228,8 +239,11 @@ conventions are cross-checked against toy-scale exact computations and a dataset
 zeros of the 60 primitive L-functions of moduli 5–19; the variational constants are
 reproduced to ten digits by three independent implementations (the high-precision
 closed-form/Nyström pair is shipped as payoff_hp2.py; the coarse grid anchor qg_check.py
-reaches 4–5 digits, and its printed v ≥ 0 flag is a discretisation artifact — absent in the
-closed-form solve and at finer grids, where v vanishes linearly at the free boundary). The
+reaches 4–5 digits, and its printed v ≥ 0 flag is a discretisation artifact of its own
+edge-sampling scheme: on an exact-cell discretisation min v is POSITIVE at every tested
+resolution and decays like the grid spacing — v vanishing linearly at the free boundary —
+with the ladder n = 500…8000 shipped in ext_checks.py/log_ext_checks.txt; the closed-form
+solve is positive with strict KKT complementarity). The
 orientation figures of §10.4 are computed by the shipped table2_check.py. These checks
 validate transcription and conventions; they are not part of any proof.
 
@@ -519,7 +533,11 @@ sits ON the constraint by construction — the optimiser drives D₀ to the boun
 margin is 0 nats at every Q (table2_check.py), which is admissible: the condition is an
 inequality with the j-sum prefactor and the log(L/η) slack already inside it, and equality
 delivers exactly the target θ₀ (the former "+3% at 10¹⁰⁰" pricing referred to the interior
-optimum that the w ≥ 1 clamp replaced, and is withdrawn). Either way ‖Ẽ_χ‖ ≤ θ₀ → 0 faster
+optimum that the w ≥ 1 clamp replaced, and is withdrawn). Sensitivity, computed
+(ext_checks.py): REQUIRING a margin of 1 nat moves P_eff by ≤ 0.003 at 10²⁵ and ≤ 10⁻⁴
+from 10¹⁰⁰ on; even a forced margin of 0.1·L (≈ 28 nats at 10¹⁰⁰) costs only
+0.021/0.002/0.0004 at 10²⁵/10¹⁰⁰/10³⁰⁰ — the zero-margin design is a boundary convenience,
+not a knife edge. Either way ‖Ẽ_χ‖ ≤ θ₀ → 0 faster
 than any required rate, uniformly over the family. The window j-sum is collected here at crude explicit constants;
 the honest collection (per-window decrement 0.350/ℒ at the reference design,
 Σ_j = 2.86ℒ·(1 + o(1)); ≈ 0.29/ℒ at the design of record, same order) is in the companion
@@ -662,7 +680,11 @@ P = 2 − min B. Optimal v: cos(√2t) in the bulk; edge zones from the quartic 
 three calibration gates: MT = 0.672500703679412; flat-v 4/3; and [So16]'s PUBLISHED GRH
 benchmark reproduced on the strictly better kernel F = min(|α|, 1) at λ = 2 —
 0.9322826239 against Sono's 0.93228262, gate3_so16.py — a gate that lands on someone
-else's published number):
+else's published number. One honest caveat, stated because a referee will notice it: all
+three gates are special cases — fixed kernel or a C-limit — so they certify the SOLVER
+against outside ground truth; the finite-C free-boundary regime the headline uses is
+checked separately, by the closed-form/Nyström agreement to twelve digits and the strict
+KKT complementarity of payoff_hp2.py):
 π⁴/18 → 0.7212835668 at λ* = 1.2507321515; 2π⁴/27 → 0.7099167448 at λ* = 1.1931581210;
 gain positive for EVERY finite C (no break-even); λ = 1⁺ slope ≈ 0.68 (weakly C-dependent:
 0.6847 at C = 1, 0.6819 at C = 20). Remark (an
@@ -755,6 +777,9 @@ the mean-value engine under [So21]) ·
 L-functions*, Adv. Math. 369 (2020), art. 107185; arXiv:1706.02848 ·
 [CLLR] V. Chandee, Y. Lee, S.-C. Liu, M. Radziwiłł, *Simple zeros of primitive Dirichlet
 L-functions and the asymptotic large sieve*, Q. J. Math. 65 (2014), 63–87; arXiv:1211.6725 ·
+[Di24] M. Dickinson, *Zeros of Dirichlet L-functions near the critical line*, Mathematika
+(2024), doi:10.1112/mtk.12239; arXiv:2211.06264 (38.2% on the line for the primitive
+family of a single fixed modulus, T ≫ q^ε) ·
 [DPR] S. Drappeau, K. Pratt, M. Radziwiłł, *One-level density estimates for Dirichlet
 L-functions with extended support*, Algebra & Number Theory 17 (2023), 805–829 ·
 [FM] D. Fiorilli, S. J. Miller, *Surpassing the Ratios Conjecture in the 1-level density of
@@ -801,8 +826,10 @@ sorry-free; #print axioms reports only propext, Classical.choice, Quot.sound; th
 retains the A–E lettering, in which the Dirichlet case is Theorem E) ·
 [So16] K. Sono, *A Note on Simple Zeros of Primitive Dirichlet L-Functions*, Bull. Aust.
 Math. Soc. 93 (2016), 19–30 (the GRH low-lying benchmark, M = 0.93228262) ·
-[So21] K. Sono, *Zeros of Dirichlet L-functions on the critical line*, arXiv:2105.07422
-(2021; unpublished; the even-primitive restriction is in its (1.8)) ·
+[So21] K. Sono, *Zeros of Dirichlet L-functions on the critical line*, J. Number Theory
+(2025; PII S0022314X25000319); arXiv:2105.07422 (2021). The arXiv page carries no journal
+reference, which misled earlier drafts of this paper; the even-primitive restriction is in
+its (1.8); window floor (log Q)² ·
 [Va] R. C. Vaughan, *The Large Sieve* (Penn State lecture notes,
 personal.science.psu.edu/rcv4/LargeSieve.pdf), Lemma 6, Thm 4 ·
 [Wu16] X. Wu, *Distinct Zeros and Simple Zeros for the Family of Dirichlet L-Functions*,
